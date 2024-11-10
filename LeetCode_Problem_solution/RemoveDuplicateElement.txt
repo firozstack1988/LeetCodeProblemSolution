@@ -1,0 +1,22 @@
+class RemoveDuplicateElement{
+    static int[] removeDuplicateElement(){
+        int arr[]={0,0,1,1,1,2,2,3,3,4};
+        int n=arr.length-1;
+        int newArr[]=new int[5];
+        int k=0;
+         for(int i=0;i<n;i++){
+             if(arr[i]!=arr[i+1]){
+              newArr[k++]=arr[i];
+            }
+         }
+         newArr[k++]=arr[n];
+        return newArr;
+    }
+    
+    public static void main(String[] args) {
+          int res[]=removeDuplicateElement();
+          for(int val:res){
+              System.out.print(val+",");
+          }
+    }
+}

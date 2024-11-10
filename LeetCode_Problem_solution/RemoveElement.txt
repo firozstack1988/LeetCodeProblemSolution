@@ -1,0 +1,23 @@
+class RemoveElement {
+    static int[] removeElement(){
+        int arr[]={3,2,2,3};
+        int n=arr.length;
+        int val=3;
+        int newArr[]=new int[val];
+        int k=0;
+         for(int i=0;i<arr.length;i++){
+             if(i==val){
+             continue;
+             }
+             newArr[k++]=arr[i];
+         }
+        return newArr;
+    }
+    
+    public static void main(String[] args) {
+          int res[]=removeElement();
+          for(int val:res){
+              System.out.print(val+",");
+          }
+    }
+}

@@ -1,0 +1,27 @@
+class Solution {
+    public static String mergeAlternately(String word1, String word2) {
+         int n1=word1.length();
+         int n2=word2.length();
+         String st="";
+         int j=0;
+         char ch1;
+         char ch2;
+         int k=0;
+         for(int i=0;i<n1;i++){
+              ch1=word1.charAt(i);
+            for(j=k;j<n2;j++){
+              ch2=word2.charAt(j);
+              st+=Character.toString(ch1)+Character.toString(ch2);
+             break;
+            }
+           k++; 
+         }
+         return st;
+    }
+    public static void main(String ar[]){
+     String word1="abc";
+     String word2="pqr";
+     String res=mergeAlternately(word1,word2);
+     System.out.print(res);
+    }
+}
