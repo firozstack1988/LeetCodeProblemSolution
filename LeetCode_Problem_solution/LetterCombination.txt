@@ -1,0 +1,32 @@
+  class Combination{
+  static String[] lettercombination(){
+        char arr1[]={'a','b','c'};
+        char arr2[]={'d','e','f'};
+        int n1=arr1.length;
+        int n2=arr2.length;
+        String st[]=new String[n1*n2];
+        int k=0;
+        int i=0;
+        int j=0;
+        while(i<n1){
+            while(j<n2){
+             String result = Character.toString(arr1[i]) + Character.toString(arr2[j]);
+             st[k]=result;
+             j++;
+             k++;
+            }
+          j=0;
+          i++;
+        }
+        return st;
+    }
+  } 
+
+  public static void main(String[] args) {
+           String arr[]=lettercombination();
+         for(String val:arr){
+             System.out.print(val+",");
+         }
+        
+    }
+}
